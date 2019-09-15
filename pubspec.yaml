@@ -27,7 +27,18 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  #网络请求
+  dio: ^2.1.2
+  #本地存储
+  shared_preferences: ^0.5.2
+  #状态管理
+  provider: ^3.0.0+1
+  #加密
+  encrypt: ^3.2.0
+  #打开文件，android更新下载安装包用
+  open_file: ^2.0.3
+  #flare动画
+  flare_flutter: ^1.5.5
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -41,9 +52,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/bAvqIeblkajqaqA.jpg
+    - assets/images/0069lnCQly1fi6knj5e8xj30xc0ma75u.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
