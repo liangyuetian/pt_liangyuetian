@@ -4,6 +4,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:pt_liangyuetian/pages/sidebar/sidebar_page.dart';
+import 'package:pt_liangyuetian/router/application.dart';
+import 'package:pt_liangyuetian/router/routers.dart';
 
 class MainPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -74,10 +76,24 @@ class MainPage extends StatelessWidget {
 //        ),
         body: Container(
           child: SingleChildScrollView(
-            child: new Text('哈哈，这是我最可爱的妹子呢'),
+            child: new Column(
+              children: <Widget>[
+                new Text('哈哈，这是我最可爱的妹子呢'),
+                new CupertinoButton(child: new Text('点击进入图灵社区'), onPressed: () {
+                  gotoWeb(context);
+                })
+              ],
+            )
           ),
         ),
       ),
     );
+  }
+
+  gotoWeb(context) {
+    print("点击按钮");
+    String path = Uri.encodeComponent('https://www.ituring.com.cn/');
+    String title = Uri.encodeComponent('首页-图灵社区');
+    Application.router.navigateTo(context, '${Routes.webViewPage}?title=$title&url=$path');
   }
 }
