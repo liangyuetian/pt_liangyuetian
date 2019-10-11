@@ -14,3 +14,6 @@
 * [基于Flutter的超完整仿腾讯动漫](https://github.com/ZDfordream/FlutterTianYue)
 * [仿BOSS直聘](https://github.com/heruijun/flutter_boss)
 
+在项目根目录执行，打开xcode：
+
+➜  newbie open ios/Runner.xcworkspace

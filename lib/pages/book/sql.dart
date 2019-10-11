@@ -4,10 +4,9 @@ import 'dart:typed_data';
 
 import 'package:flutter/services.dart' show rootBundle;
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_full_pdf_viewer/full_pdf_viewer_scaffold.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
 
 class SQLKnow extends StatefulWidget {
   @override
@@ -23,7 +22,7 @@ class _SQLKnow extends State {
     createFileOfPdfUrl().then((f) {
       setState(() {
         pathPDF = f.path;
-//        print(pathPDF);
+        print(pathPDF);
       });
     });
   }
@@ -52,16 +51,6 @@ class _SQLKnow extends State {
 
   @override
   Widget build(BuildContext context) {
-    return PDFViewerScaffold(
-        appBar: AppBar(
-          title: Text("SQL必知必会（第4版）"),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.share),
-              onPressed: () {},
-            ),
-          ],
-        ),
-        path: pathPDF);
+    return PDFPage(pathPDF, 1);
   }
 }

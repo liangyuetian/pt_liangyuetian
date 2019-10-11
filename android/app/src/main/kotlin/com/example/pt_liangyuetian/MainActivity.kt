@@ -1,4 +1,4 @@
-package com.liangyuetian.pt_liangyuetian
+package com.example.pt_liangyuetian
 
 import android.os.Bundle
 

@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:pt_liangyuetian/pages/sidebar/sidebar_page.dart';
 import 'package:pt_liangyuetian/router/application.dart';
 import 'package:pt_liangyuetian/router/routers.dart';
-import 'package:pt_liangyuetian/pages/book/sql.dart';
+//import 'package:pt_liangyuetian/pages/book/sql.dart';
 
 class MainPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -83,10 +83,10 @@ class MainPage extends StatelessWidget {
                 new CupertinoButton(child: new Text('点击进入图灵社区'), onPressed: () {
                   gotoWeb(context);
                 }),
-                new MaterialButton(child: new Text('打开SQL必知必会PDF'), onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SQLKnow()),
-                )),
+//                new MaterialButton(child: new Text('打开SQL必知必会PDF'), onPressed: () => Navigator.push(
+//                  context,
+//                  MaterialPageRoute(builder: (context) => SQLKnow()),
+//                )),
               ],
             )
           ),
